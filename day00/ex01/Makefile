@@ -1,4 +1,4 @@
-SRC = phonebook.cpp
+SRC = phonebook.cpp add_contacts.cpp search_contacts.cpp print_contacts.cpp
 
 FLAGE= -Wall -Wextra -Werror
 

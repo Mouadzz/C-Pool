@@ -45,4 +45,8 @@ public:
     std::string get_darkest_secret() { return darkest_secret; }
 };
 
+void print_contacts(int index, Contact obs[]);
+void search_contacts(Contact obs[], int index);
+void add_contacts(Contact obs[], int *index);
+
 #endif
