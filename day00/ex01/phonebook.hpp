@@ -2,6 +2,8 @@
 #define PHONEBOOK_HPP
 #include <string>
 #include <iostream>
+#include <ctime>
+#include <iomanip>
 
 class Contact
 {
@@ -42,8 +44,5 @@ public:
     std::string get_underwear_color() { return underwear_color; }
     std::string get_darkest_secret() { return darkest_secret; }
 };
-
-void add_contact();
-void search_contact(Contact obs, int index);
 
 #endif
