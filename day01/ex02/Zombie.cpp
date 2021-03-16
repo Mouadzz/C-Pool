@@ -9,7 +9,20 @@ void Zombie::announce() const
 
 void randomChump(ZombieEvent &instance)
 {
-    Zombie * zomb = instance.newZombie("LeBlanc");
+    std::string names[] = {"LeBlanc", "Zed", "Lucian", "Cassiopia", "Oriana", "Ryze", "Ekko"};
+    int result = std::rand() % 7;
+    Zombie *zomb = instance.newZombie(names[result]);
     zomb->announce();
     delete zomb;
+}
+
+Zombie::~Zombie()
+{
+    std::cout << "One Shot" << std::endl;
+}
+
+Zombie::Zombie(std::string name, std::string type)
+{
+    this->_name = name;
+    this->_type = type;
 }

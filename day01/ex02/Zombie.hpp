@@ -9,12 +9,8 @@ class Zombie
         std::string _type;
 
     public:
-        Zombie(std::string name, std::string type)
-        {
-            this->_name = name;
-            this->_type = type;
-        }
-        // ~Zombie();
+        Zombie(std::string name, std::string type);
+        ~Zombie();
         void announce() const;
 };
 
