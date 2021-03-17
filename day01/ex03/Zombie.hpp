@@ -1,0 +1,18 @@
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
+#include <iostream>
+
+class Zombie
+{
+    private:
+        std::string _name;
+        std::string _type;
+
+    public:
+        Zombie();
+        ~Zombie();
+        void announce() const;
+        void set_zombie(std::string name, std::string type);
+};
+
+#endif
