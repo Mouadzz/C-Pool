@@ -8,6 +8,7 @@ class Fixed
 private:
     int fixedvalue;
     static const int nbits = 8;
+    bool isfloat;
 
 public:
     Fixed();
