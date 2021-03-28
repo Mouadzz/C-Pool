@@ -105,6 +105,25 @@ void FragTrap::mechromagicianAttack(std::string const &target)
     std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with Mechromagician, causing " << this->_mechromagicianAttackDamage << " points of damage!" << std::endl;
 }
 
+FragTrap &FragTrap::operator=(const FragTrap &b)
+{
+    this->_hitPoints = b._hitPoints;
+    this->_maxHitPoints = b._maxHitPoints;
+    this->_energyPoints = b._energyPoints;
+    this->_maxEnergyPoints = b._maxEnergyPoints;
+    this->_level = b._level;
+    this->_name = b._name;
+    this->_meleeAttackDamage = b._meleeAttackDamage;
+    this->_rangedAttackDamage = b._rangedAttackDamage;
+    this->_armorDamageReduction = b._armorDamageReduction;
+    this->_torgueFiestaAttackDamage = b._torgueFiestaAttackDamage;
+    this->_laserInfernoAttackDamage = b._laserInfernoAttackDamage;
+    this->_meatUnicycleAttackDamage = b._meatUnicycleAttackDamage;
+    this->_funzerkerAttackDamage = b._funzerkerAttackDamage;
+    this->_mechromagicianAttackDamage = b._mechromagicianAttackDamage;
+    return *this;
+}
+
 unsigned int FragTrap::getHitPoints() { return this->_hitPoints; }
 unsigned int FragTrap::getMaxHitPoints() { return this->_maxHitPoints; }
 unsigned int FragTrap::getEnergyPoints() { return this->_energyPoints; }

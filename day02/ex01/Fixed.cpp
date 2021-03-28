@@ -25,7 +25,6 @@ Fixed &Fixed::operator=(const Fixed &b)
     std::cout << "Assignation operator called" << std::endl;
     this->fixedvalue = b.fixedvalue;
     this->isfloat = b.isfloat;
-    this->getRawBits();
     return *this;
 }
 
