@@ -36,7 +36,7 @@ void FragTrap::beRepaired(unsigned int amount)
         {
             this->_hitPoints += amount;
         }
-    } 
+    }
     else
     {
         this->_hitPoints = this->_maxHitPoints;
