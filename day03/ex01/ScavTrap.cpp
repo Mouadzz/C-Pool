@@ -41,12 +41,16 @@ unsigned int ScavTrap::getArmorDamageReduction() { return this->_armorDamageRedu
 
 void ScavTrap::rangedAttack(std::string const &target)
 {
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " at range, causing " << this->_rangedAttackDamage << " points of damage!" << std::endl;
+    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " Hehehehe, mwaa ha ha ha, MWAA HA HA HA!"
+              << " Take This Ranged Attack"
+              << " Bop! -" << this->_rangedAttackDamage << " Damage." << std::endl;
 }
 
 void ScavTrap::meleeAttack(std::string const &target)
 {
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " at melee, causing " << this->_meleeAttackDamage << " points of damage!" << std::endl;
+    std::cout << "FR4G-TP " << this->_name << " attacks " << target << "I am a tornado of death and bullets!"
+              << " Take This Melee Attack"
+              << " Bop! -" << this->_meleeAttackDamage << " Damage." << std::endl;
 }
 
 void ScavTrap::takeDamage(unsigned int amount)
@@ -59,8 +63,8 @@ void ScavTrap::takeDamage(unsigned int amount)
     {
         this->_hitPoints = 0;
     }
-    std::cout << "FR4G-TP " << this->_name << " takes " << amount << " points of damage!" << std::endl;
-    std::cout << "Ow hohoho, that hurts! Yipes!" << std::endl;
+    std::cout << "FR4G-TP " << this->_name << " takes -" << amount << " Damage."
+              << " That looks like it hurts!" << std::endl;
 }
 
 void ScavTrap::beRepaired(unsigned int amount)
@@ -81,6 +85,13 @@ void ScavTrap::beRepaired(unsigned int amount)
         this->_hitPoints = this->_maxHitPoints;
     }
 
-    std::cout << "FR4G-TP " << this->_name << " takes " << amount << " points of health!" << std::endl;
-    std::cout << "Sweet life juice!" << std::endl;
+    std::cout << "FR4G-TP " << this->_name << " takes +" << amount << " Health!"
+              << " Healsies!" << std::endl;
+}
+
+void ScavTrap::challengeNewcomer(std::string const &target)
+{
+    std::string chall[] = {"You versus me! Me versus you! Either way!", "I will prove to you my robotic superiority!", "Dance battle! Or, you know... regular battle.", "Man versus machine! Very tiny streamlined machine!", "Care to have a friendly duel?"};
+    int rand = std::rand() % 5;
+    std::cout << "Hey " << target << " ," << chall[rand] << std::endl;
 }
