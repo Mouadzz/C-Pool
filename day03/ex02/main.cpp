@@ -9,7 +9,5 @@ int main(void)
     Scav2.meleeAttack(Scav1.getName());
     Scav1.takeDamage(20);
     Scav2.beRepaired(50);
-    std::cout << "HP: " << Scav1.getHitPoints() << "\nEP: " << Scav1.getEnergyPoints() << std::endl;
-    std::cout << "HP: " << Scav2.getHitPoints() << "\nEP: " << Scav2.getEnergyPoints() << std::endl;
     Scav1.challengeNewcomer(Scav2.getName());
 }
