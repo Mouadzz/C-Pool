@@ -3,7 +3,7 @@
 int main(void)
 {
     srand(time(0));
-    FragTrap inst("mamoussa");
+    FragTrap inst("Naruto");
     inst.rangedAttack("Konoha");
     inst.meleeAttack("pain");
     inst.takeDamage(50);

@@ -14,11 +14,6 @@ private:
     unsigned int _meleeAttackDamage;
     unsigned int _rangedAttackDamage;
     unsigned int _armorDamageReduction;
-    unsigned int _torgueFiestaAttackDamage;
-    unsigned int _laserInfernoAttackDamage;
-    unsigned int _meatUnicycleAttackDamage;
-    unsigned int _funzerkerAttackDamage;
-    unsigned int _mechromagicianAttackDamage;
 
 public:
     FragTrap();
@@ -30,11 +25,6 @@ public:
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
     void vaulthunter_dot_exe(std::string const &target);
-    void torgueFiestaAttack(std::string const &target);
-    void laserInfernoAttack(std::string const &target);
-    void meatUnicycleAttack(std::string const &target);
-    void funzerkerAttack(std::string const &target);
-    void mechromagicianAttack(std::string const &target);
 
     unsigned int getHitPoints();
     unsigned int getMaxHitPoints();
@@ -45,11 +35,6 @@ public:
     unsigned int getMeleeAttackDamage();
     unsigned int getRangedAttackDamage();
     unsigned int getArmorDamageReduction();
-    unsigned int getTorgueFiestaAttackDamage();
-    unsigned int getLaserInfernoAttackDamage();
-    unsigned int getMeatUnicycleAttackDamage();
-    unsigned int getFunzerkerAttackDamage();
-    unsigned int getMechromagicianAttackDamage();
 };
 
 #endif

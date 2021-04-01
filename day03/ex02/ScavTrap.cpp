@@ -1,11 +1,11 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap("Sasuke", 100, 100, 100, 100, 1, 30, 5, 20)
 {
     std::cout << "Recompiling my combat code!" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : _name(name), _hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100), _level(1), _meleeAttackDamage(30), _rangedAttackDamage(20), _armorDamageReduction(5)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 100, 100, 100, 1, 30, 5, 20)
 {
     std::cout << "Recompiling my combat code!" << std::endl;
 }
@@ -27,66 +27,6 @@ ScavTrap &ScavTrap::operator=(const ScavTrap &b)
     this->_rangedAttackDamage = b._rangedAttackDamage;
     this->_armorDamageReduction = b._armorDamageReduction;
     return *this;
-}
-
-unsigned int ScavTrap::getHitPoints() { return this->_hitPoints; }
-unsigned int ScavTrap::getMaxHitPoints() { return this->_maxHitPoints; }
-unsigned int ScavTrap::getEnergyPoints() { return this->_energyPoints; }
-unsigned int ScavTrap::getMaxEnergyPoints() { return this->_maxEnergyPoints; }
-unsigned int ScavTrap::getLevel() { return this->_level; }
-std::string ScavTrap::getName() { return this->_name; }
-unsigned int ScavTrap::getMeleeAttackDamage() { return this->_meleeAttackDamage; }
-unsigned int ScavTrap::getRangedAttackDamage() { return this->_rangedAttackDamage; }
-unsigned int ScavTrap::getArmorDamageReduction() { return this->_armorDamageReduction; }
-
-void ScavTrap::rangedAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " Hehehehe, mwaa ha ha ha, MWAA HA HA HA!"
-              << " Take This Ranged Attack"
-              << " Bop! -" << this->_rangedAttackDamage << " Damage." << std::endl;
-}
-
-void ScavTrap::meleeAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << "I am a tornado of death and bullets!"
-              << " Take This Melee Attack"
-              << " Bop! -" << this->_meleeAttackDamage << " Damage." << std::endl;
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-    if ((amount - this->_armorDamageReduction) < this->_hitPoints)
-    {
-        this->_hitPoints -= (amount - this->_armorDamageReduction);
-    }
-    else
-    {
-        this->_hitPoints = 0;
-    }
-    std::cout << "FR4G-TP " << this->_name << " takes -" << amount << " Damage."
-              << " That looks like it hurts!" << std::endl;
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-    if (amount < this->_maxHitPoints)
-    {
-        if ((amount + this->_hitPoints) >= this->_maxHitPoints)
-        {
-            this->_hitPoints = this->_maxHitPoints;
-        }
-        else
-        {
-            this->_hitPoints += amount;
-        }
-    }
-    else
-    {
-        this->_hitPoints = this->_maxHitPoints;
-    }
-
-    std::cout << "FR4G-TP " << this->_name << " takes +" << amount << " Health!"
-              << " Healsies!" << std::endl;
 }
 
 void ScavTrap::challengeNewcomer(std::string const &target)

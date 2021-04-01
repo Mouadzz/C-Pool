@@ -1,10 +1,10 @@
-#ifndef FRAGTRAP_HPP
-#define FRAGTRAP_HPP
+#ifndef CLAPTRAP_HPP
+#define CLAPTRAP_HPP
 #include <iostream>
 
-class FragTrap
+class ClapTrap
 {
-private:
+protected:
     unsigned int _hitPoints;
     unsigned int _maxHitPoints;
     unsigned int _energyPoints;
@@ -16,15 +16,14 @@ private:
     unsigned int _armorDamageReduction;
 
 public:
-    FragTrap();
-    FragTrap(std::string name);
-    ~FragTrap();
-    FragTrap &operator=(const FragTrap &b);
+    ClapTrap();
+    ClapTrap(std::string name, int hitPoints, int maxHitPoints, int energyPoints, int maxEnergyPoints, int level, int meleeAttackDamage, int armorDamageReduction, int rangedAttackDamage);
+    ~ClapTrap();
+    ClapTrap &operator=(const ClapTrap &b);
     void rangedAttack(std::string const &target);
     void meleeAttack(std::string const &target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
-    void vaulthunter_dot_exe(std::string const &target);
     unsigned int getHitPoints();
     unsigned int getMaxHitPoints();
     unsigned int getEnergyPoints();

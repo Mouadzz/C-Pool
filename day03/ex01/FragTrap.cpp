@@ -51,7 +51,7 @@ FragTrap::FragTrap()
     std::cout << "Let's get this party started!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : _name(name), _hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100), _level(1), _meleeAttackDamage(30), _rangedAttackDamage(20), _armorDamageReduction(5), _torgueFiestaAttackDamage(21), _laserInfernoAttackDamage(57), _meatUnicycleAttackDamage(42), _funzerkerAttackDamage(15), _mechromagicianAttackDamage(95)
+FragTrap::FragTrap(std::string name) : _name(name), _hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100), _level(1), _meleeAttackDamage(30), _rangedAttackDamage(20), _armorDamageReduction(5)
 {
     std::cout << "Let's get this party started!" << std::endl;
 }
@@ -63,6 +63,8 @@ FragTrap::~FragTrap()
 
 void FragTrap::vaulthunter_dot_exe(std::string const &target)
 {
+    std::string atacks[] = {"TorgueFiesta Attack", "Laser Inferno Attack", "MeatUnicycle Attack", "Funzerker Attack", "Mechromagician Attack"};
+    std::string damage[] = {"14", "54", "87", "15", "65"};
     if (this->_energyPoints < 25)
     {
         std::cout << "Crap, no more shots left!" << std::endl;
@@ -71,38 +73,8 @@ void FragTrap::vaulthunter_dot_exe(std::string const &target)
     {
         this->_energyPoints -= 25;
         int rand = std::rand() % 5;
-        if (rand == 0)
-            this->torgueFiestaAttack(target);
-        else if (rand == 1)
-            this->laserInfernoAttack(target);
-        else if (rand == 2)
-            this->meatUnicycleAttack(target);
-        else if (rand == 3)
-            this->funzerkerAttack(target);
-        else if (rand == 4)
-            this->mechromagicianAttack(target);
+        std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with " << atacks[rand] << " causing " << damage[rand] << " points of damage!" << std::endl;
     }
-}
-
-void FragTrap::torgueFiestaAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with Torgue Fiesta, causing " << this->_torgueFiestaAttackDamage << " points of damage!" << std::endl;
-}
-void FragTrap::laserInfernoAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with Laser Inferno, causing " << this->_laserInfernoAttackDamage << " points of damage!" << std::endl;
-}
-void FragTrap::meatUnicycleAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with MeatUnicycle, causing " << this->_meatUnicycleAttackDamage << " points of damage!" << std::endl;
-}
-void FragTrap::funzerkerAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with Funzerker, causing " << this->_funzerkerAttackDamage << " points of damage!" << std::endl;
-}
-void FragTrap::mechromagicianAttack(std::string const &target)
-{
-    std::cout << "FR4G-TP " << this->_name << " attacks " << target << " with Mechromagician, causing " << this->_mechromagicianAttackDamage << " points of damage!" << std::endl;
 }
 
 FragTrap &FragTrap::operator=(const FragTrap &b)
@@ -116,11 +88,6 @@ FragTrap &FragTrap::operator=(const FragTrap &b)
     this->_meleeAttackDamage = b._meleeAttackDamage;
     this->_rangedAttackDamage = b._rangedAttackDamage;
     this->_armorDamageReduction = b._armorDamageReduction;
-    this->_torgueFiestaAttackDamage = b._torgueFiestaAttackDamage;
-    this->_laserInfernoAttackDamage = b._laserInfernoAttackDamage;
-    this->_meatUnicycleAttackDamage = b._meatUnicycleAttackDamage;
-    this->_funzerkerAttackDamage = b._funzerkerAttackDamage;
-    this->_mechromagicianAttackDamage = b._mechromagicianAttackDamage;
     return *this;
 }
 
@@ -133,8 +100,3 @@ std::string FragTrap::getName() { return this->_name; }
 unsigned int FragTrap::getMeleeAttackDamage() { return this->_meleeAttackDamage; }
 unsigned int FragTrap::getRangedAttackDamage() { return this->_rangedAttackDamage; }
 unsigned int FragTrap::getArmorDamageReduction() { return this->_armorDamageReduction; }
-unsigned int FragTrap::getTorgueFiestaAttackDamage() { return this->_torgueFiestaAttackDamage; }
-unsigned int FragTrap::getLaserInfernoAttackDamage() { return this->_laserInfernoAttackDamage; }
-unsigned int FragTrap::getMeatUnicycleAttackDamage() { return this->_meatUnicycleAttackDamage; }
-unsigned int FragTrap::getFunzerkerAttackDamage() { return this->_funzerkerAttackDamage; }
-unsigned int FragTrap::getMechromagicianAttackDamage() { return this->_mechromagicianAttackDamage; }
