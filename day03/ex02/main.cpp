@@ -13,7 +13,7 @@ int main(void)
     Scav2.beRepaired(50);
     Scav1.challengeNewcomer(Scav2.getName());
 
-    FragTrap inst("mamoussa");
+    FragTrap inst("Itachi");
     inst.rangedAttack("Konoha");
     inst.meleeAttack("pain");
     inst.takeDamage(50);
