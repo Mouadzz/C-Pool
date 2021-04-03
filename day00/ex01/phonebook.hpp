@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/03 14:07:00 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/03 14:07:18 by mlasrite         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef PHONEBOOK_HPP
 #define PHONEBOOK_HPP
 #include <string>
@@ -7,6 +19,7 @@
 
 class Contact
 {
+private:
     std::string first_name;
     std::string last_name;
     std::string nickname;

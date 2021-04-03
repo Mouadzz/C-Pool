@@ -1,5 +1,16 @@
-#include "phonebook.hpp"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   print_contacts.cpp                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/03 14:07:27 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/03 14:07:53 by mlasrite         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "phonebook.hpp"
 
 void print_contacts(int index, Contact obs[])
 {
