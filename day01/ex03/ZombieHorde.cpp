@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ZombieHorde.cpp                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/04 12:19:00 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/04 12:24:54 by mlasrite         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ZombieHorde.hpp"
 
 ZombieHorde::ZombieHorde(int n)
@@ -26,4 +38,5 @@ ZombieHorde::~ZombieHorde()
 {
     for (int i = 0; i < this->nb; i++)
         delete this->zomb[i];
+    delete this->zomb;
 }
