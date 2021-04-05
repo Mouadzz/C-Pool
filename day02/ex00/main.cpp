@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:54:41 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 11:55:32 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/05 12:18:15 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,4 @@ int main(void)
     std::cout << b.getRawBits() << std::endl;
     std::cout << c.getRawBits() << std::endl;
     return 0;
-}
+} 

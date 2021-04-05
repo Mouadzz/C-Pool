@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:59:27 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 12:04:24 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/05 12:18:20 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,4 @@ int main(void)
     std::cout << "c is " << c.toInt() << " as integer" << std::endl;
     std::cout << "d is " << d.toInt() << " as integer" << std::endl;
     return 0;
-}
+} 

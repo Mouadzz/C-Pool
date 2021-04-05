@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:54:27 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 11:54:29 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/05 12:18:11 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Fixed::Fixed()
     std::cout << "Default constructor called" << std::endl;
     this->fixedvalue = 0;
 }
-
+ 
 Fixed::~Fixed() {
     std::cout << "Destructor called" << std::endl;
 }

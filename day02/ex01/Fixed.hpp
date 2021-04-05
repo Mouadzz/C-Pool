@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:59:24 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 12:04:52 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/05 12:18:19 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ public:
 
     Fixed(const int val);
     Fixed(const float val);
-    float toFloat(void) const;
+    float toFloat(void) const; 
     int toInt(void) const;
 };
 
