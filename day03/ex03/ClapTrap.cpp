@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ClapTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/05 15:30:22 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/05 15:33:59 by mlasrite         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ClapTrap.hpp"
 
 void ClapTrap::rangedAttack(std::string const &target)
@@ -72,12 +84,13 @@ unsigned int ClapTrap::getArmorDamageReduction() { return this->_armorDamageRedu
 
 ClapTrap::ClapTrap()
 {
-    std::cout << "Let's get this party started!" << std::endl;
+    std::cout << "(Parent)Let's get this party started!" << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string name, int hitPoints, int maxHitPoints, int energyPoints, int maxEnergyPoints, int level, int meleeAttackDamage, int armorDamageReduction, int rangedAttackDamage) : _name(name), _hitPoints(hitPoints), _maxHitPoints(maxHitPoints), _energyPoints(energyPoints), _maxEnergyPoints(maxEnergyPoints), _level(level), _meleeAttackDamage(meleeAttackDamage), _rangedAttackDamage(armorDamageReduction), _armorDamageReduction(rangedAttackDamage)
+ClapTrap::ClapTrap(std::string name, int hitPoints, int maxHitPoints, int energyPoints, int maxEnergyPoints, int level, int meleeAttackDamage, int armorDamageReduction, int rangedAttackDamage) : _hitPoints(hitPoints), _maxHitPoints(maxHitPoints), _energyPoints(energyPoints), _maxEnergyPoints(maxEnergyPoints), _level(level), _meleeAttackDamage(meleeAttackDamage), _rangedAttackDamage(rangedAttackDamage), _armorDamageReduction(armorDamageReduction)
 {
-    std::cout << "Let's get this party started!" << std::endl;
+    this->_name = name;
+    std::cout << "(Parent)Let's get this party started!" << std::endl;
 }
 
 ClapTrap::~ClapTrap()

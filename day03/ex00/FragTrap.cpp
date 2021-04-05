@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   FragTrap.cpp                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/05 15:05:29 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/05 15:13:34 by mlasrite         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "FragTrap.hpp"
 
 void FragTrap::rangedAttack(std::string const &target)
@@ -21,7 +33,8 @@ void FragTrap::takeDamage(unsigned int amount)
         this->_hitPoints = 0;
     }
     std::cout << "FR4G-TP " << this->_name << " takes " << amount << " points of damage!" << std::endl;
-    std::cout << "Ow hohoho, that hurts! Yipes!" << std::endl;
+    if (this->_hitPoints == 0)
+        std::cout << "You got me!" << std::endl;
 }
 
 void FragTrap::beRepaired(unsigned int amount)
@@ -51,8 +64,9 @@ FragTrap::FragTrap()
     std::cout << "Let's get this party started!" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name) : _name(name), _hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100), _level(1), _meleeAttackDamage(30), _rangedAttackDamage(20), _armorDamageReduction(5)
+FragTrap::FragTrap(std::string name) : _hitPoints(100), _maxHitPoints(100), _energyPoints(100), _maxEnergyPoints(100), _level(1), _meleeAttackDamage(30), _rangedAttackDamage(20), _armorDamageReduction(5)
 {
+    this->_name = name;
     std::cout << "Let's get this party started!" << std::endl;
 }
 
