@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/05 11:59:21 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/05 12:15:33 by mlasrite         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 Fixed::Fixed()
@@ -15,6 +27,7 @@ Fixed::~Fixed()
 Fixed::Fixed(Fixed const &copie)
 {
     std::cout << "Copy constructor called" << std::endl;
+    std::cout << "Assignation operator called" << std::endl;
     this->fixedvalue = copie.fixedvalue;
     this->isfloat = copie.isfloat;
     this->getRawBits();
@@ -41,11 +54,13 @@ void Fixed::setRawBits(int const raw)
 
 Fixed::Fixed(const int val)
 {
+    std::cout << "Int constructor called" << std::endl;
     this->isfloat = false;
     this->fixedvalue = val;
 }
 Fixed::Fixed(const float val)
 {
+    std::cout << "Float constructor called" << std::endl;
     this->isfloat = true;
     this->fixedvalue = roundf(val * pow(2, this->nbits));
 }

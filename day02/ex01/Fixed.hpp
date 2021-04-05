@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/04/05 11:59:24 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/05 12:04:52 by mlasrite         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 #define FIXED_HPP
 #include <iostream>
@@ -24,6 +36,6 @@ public:
     int toInt(void) const;
 };
 
-std::ostream& operator<< (std::ostream &out, const Fixed &c);
+std::ostream &operator<<(std::ostream &out, const Fixed &c);
 
 #endif
