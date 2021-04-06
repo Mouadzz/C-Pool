@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 11:59:21 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 12:18:17 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/06 14:21:25 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Fixed::Fixed(Fixed const &copie)
     std::cout << "Assignation operator called" << std::endl;
     this->fixedvalue = copie.fixedvalue;
     this->isfloat = copie.isfloat;
-    this->getRawBits(); 
+    this->getRawBits();
 }
 
 Fixed &Fixed::operator=(const Fixed &b)
