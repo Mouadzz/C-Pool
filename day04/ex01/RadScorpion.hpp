@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PlasmaRifle.hpp                                    :+:      :+:    :+:   */
+/*   RadScorpion.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/06 17:54:09 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/07 12:38:22 by mlasrite         ###   ########.fr       */
+/*   Created: 2021/04/07 12:56:10 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/07 12:56:37 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PLASMARIFLE_HPP
-#define PLASMARIFLE_HPP
-#include <iostream>
-#include "AWeapon.hpp"
+#ifndef RADSCORPION_HPP
+#define RADSCORPION_HPP
+#include "Enemy.hpp"
 
-class PlasmaRifle : public AWeapon
+class RadScorpion : public Enemy
 {
 protected:
-    std::string _name;
-    int _damage;
-    int _apcost;
+    std::string _type;
+    int _hp;
 
 public:
-    PlasmaRifle();
-    ~PlasmaRifle();
-    std::string getName() const;
-    int getAPCost() const;
-    int getDamage() const;
-    virtual void attack() const = 0;
+    RadScorpion();
+    ~RadScorpion();
+    std::string getType() const;
+    int getHP() const;
+    virtual void takeDamage(int);
 };
 
 #endif
