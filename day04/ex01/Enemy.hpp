@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:39:27 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/07 12:46:21 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/07 16:52:50 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ protected:
     int _hp;
 public:
     Enemy(int hp, std::string const &type);
-    ~Enemy();
+    virtual ~Enemy();
     std::string getType() const;
     int getHP() const;
     virtual void takeDamage(int);

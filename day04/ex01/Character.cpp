@@ -6,17 +6,18 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:59:05 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/07 15:17:14 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/07 17:44:30 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Character.hpp"
 
-Character::Character(std::string const &name) : _name(name), _ap(40)
+Character::Character(std::string const &name) : _ap(40)
 {
-    std::cout << "Character Constructor Called" << std::endl;
+    this->_name = name;
+    this->_weapon = NULL;
 }
-Character::~Character() { std::cout << "Character Destructor Called" << std::endl; }
+Character::~Character() {}
 void Character::recoverAP()
 {
     this->_ap += 10;
@@ -29,16 +30,31 @@ void Character::equip(AWeapon *weapon)
 }
 void Character::attack(Enemy *enemy)
 {
-    if (this->_weapon)
+    if (this->_weapon && enemy && enemy->getHP() > 0)
     {
-        std::cout << this->_name << " attacks " << enemy->getType() << " with a " << this->_weapon->getName() << std::endl;
-        enemy->takeDamage(this->_weapon->getDamage());
-        if (enemy->getHP() <= 0)
+        if (this->_ap >= this->_weapon->getAPCost())
         {
-            std::cout << "Enemy must be deleted! " << std::endl;
+            this->_ap -= this->_weapon->getAPCost();
+            if (this->_ap < 0)
+                this->_ap = 0;
+            std::cout << this->_name << " attacks " << enemy->getType() << " with a " << this->_weapon->getName() << std::endl;
+            this->_weapon->attack();
+            enemy->takeDamage(this->_weapon->getDamage());
+            if (enemy->getHP() <= 0)
+            {
+                delete enemy;
+                enemy = NULL;
+            }
         }
+        else
+            std::cout << "No more AP left!" << std::endl;
+    }
+    else
+    {
+        std::cout << "Enemy already dead!" << std::endl;
     }
 }
+
 std::string Character::getName() const { return this->_name; }
 int Character::getAp() const { return this->_ap; }
 AWeapon *Character::getWeaponPtr() const { return this->_weapon; }
