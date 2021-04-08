@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:49:03 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/08 14:57:56 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/08 17:15:17 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ TacticalMarine::~TacticalMarine()
 ISpaceMarine *TacticalMarine::clone() const
 {
     ISpaceMarine *a;
+    a = this;
     return a;
 }
 void TacticalMarine::battleCry() const
