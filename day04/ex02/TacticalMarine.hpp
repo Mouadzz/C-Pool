@@ -20,6 +20,7 @@ class TacticalMarine : public ISpaceMarine
 public:
     TacticalMarine();
     ~TacticalMarine();
+    TacticalMarine &operator=(TacticalMarine const &);
     virtual ISpaceMarine *clone() const;
     virtual void battleCry() const;
     virtual void rangedAttack() const;

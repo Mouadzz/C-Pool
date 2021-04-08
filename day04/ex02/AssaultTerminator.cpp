@@ -23,9 +23,12 @@ AssaultTerminator::~AssaultTerminator()
 
 ISpaceMarine *AssaultTerminator::clone() const
 {
-    ISpaceMarine *a;
-    return a;
+    ISpaceMarine *copy = new AssaultTerminator(*this);
+    return copy;
 }
+
+AssaultTerminator &AssaultTerminator::operator=(AssaultTerminator const &) { return *this; }
+
 void AssaultTerminator::battleCry() const
 {
     std::cout << "This code is unclean. PURIFY IT!" << std::endl;

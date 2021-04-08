@@ -23,13 +23,15 @@ TacticalMarine::~TacticalMarine()
 
 ISpaceMarine *TacticalMarine::clone() const
 {
-    ISpaceMarine *a;
-    a = this;
-    return a;
+    ISpaceMarine *copy = new TacticalMarine(*this);
+    return copy;
 }
+
+TacticalMarine &TacticalMarine::operator=(TacticalMarine const &) { return *this; }
+
 void TacticalMarine::battleCry() const
 {
-    std::cout << " holy PLOT!" << std::endl;
+    std::cout << "For the holy PLOT!" << std::endl;
 }
 void TacticalMarine::rangedAttack() const
 {

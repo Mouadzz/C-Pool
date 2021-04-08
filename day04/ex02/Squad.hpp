@@ -17,9 +17,14 @@
 
 class Squad : public ISquad
 {
+private:
+    int _nUnit;
+    ISpaceMarine *_units[30];
+
 public:
     Squad();
     ~Squad();
+    Squad &operator=(Squad const &copy);
     virtual int getCount() const;
     virtual ISpaceMarine *getUnit(int) const;
     virtual int push(ISpaceMarine *);
