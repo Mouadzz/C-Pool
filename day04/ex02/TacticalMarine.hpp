@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:48:54 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/08 14:44:47 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/09 14:01:55 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class TacticalMarine : public ISpaceMarine
 {
 public:
     TacticalMarine();
+    TacticalMarine(const TacticalMarine &copie);
     ~TacticalMarine();
     TacticalMarine &operator=(TacticalMarine const &);
     virtual ISpaceMarine *clone() const;

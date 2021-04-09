@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:49:03 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/08 17:15:17 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/09 15:53:55 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ TacticalMarine::~TacticalMarine()
     std::cout << "Aaargh..." << std::endl;
 }
 
+TacticalMarine::TacticalMarine(const TacticalMarine &copie)
+{
+    *this = copie;
+}
+
 ISpaceMarine *TacticalMarine::clone() const
 {
-    ISpaceMarine *copy = new TacticalMarine(*this);
-    return copy;
+    return (ISpaceMarine *)this;
 }
 
 TacticalMarine &TacticalMarine::operator=(TacticalMarine const &) { return *this; }

@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:49:59 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/08 14:52:16 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/09 15:17:24 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ AssaultTerminator::~AssaultTerminator()
     std::cout << "I’ll be back..." << std::endl;
 }
 
+AssaultTerminator::AssaultTerminator(const AssaultTerminator &copie)
+{
+    *this = copie;
+}
+
 ISpaceMarine *AssaultTerminator::clone() const
 {
-    ISpaceMarine *copy = new AssaultTerminator(*this);
-    return copy;
+    return (ISpaceMarine *)this;
 }
 
 AssaultTerminator &AssaultTerminator::operator=(AssaultTerminator const &) { return *this; }

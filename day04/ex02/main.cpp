@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:52:53 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/08 14:52:58 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/09 16:24:09 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,15 @@ int main()
         cur->rangedAttack();
         cur->meleeAttack();
     }
-    std::cout << vlc->getCount() << std::endl;
+
+    std::cout << std::endl;
+    ISpaceMarine *clone = vlc->getUnit(0)->clone();
+    clone->rangedAttack();
+    clone = vlc->getUnit(1)->clone();
+    clone->rangedAttack();
+    std::cout << std::endl;
+
+    
     delete vlc;
     return 0;
 }
