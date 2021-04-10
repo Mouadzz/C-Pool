@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 13:56:51 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/10 16:34:41 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 22:40:58 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ MateriaSource::MateriaSource(MateriaSource &copy)
     *this = copy;
 }
 
-MateriaSource &MateriaSource::operator=(MateriaSource const &) { return *this; }
+MateriaSource &MateriaSource::operator=(MateriaSource const &)
+{
+    return *this;
+}
 
 void MateriaSource::learnMateria(AMateria *a)
 {

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:20:42 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/10 17:31:07 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 22:51:19 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Character : public ICharacter
 {
 private:
     std::string _name;
-    AMateria **_slots;
+    AMateria *_slots[4];
 
 public:
     Character(std::string name);

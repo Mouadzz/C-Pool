@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 23:19:49 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/04/10 17:49:09 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 23:15:20 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,9 @@
 //     mbani->use(0, *me);
 //     mbani->use(1, *bob);
 //     mbani->use(2, *mbani);
+//     std::cout << "ddd" << std::endl;
 //     *mamoussa = *mbani;
+//     std::cout << "ddd" << std::endl;
 //     mbani->unequip(2); // remove ice at index 2 from mbani
 //     mamoussa->use(0, *me);
 //     mamoussa->use(1, *bob);
@@ -107,13 +109,14 @@ int main()
     victor->use(0, *ryze);
     victor->use(0, *ryze);
 
-
+    std::cout << std::endl;
+    victor->equip(temp);
+    ryze->equip(temp);
     *ryze = *victor;
-    ryze->use(0, *ryze);
-    
-    
     victor->unequip(0);
+    ryze->use(0, *victor);
     victor->use(0, *ryze);
+
 
     delete source;
     delete victor;

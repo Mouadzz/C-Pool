@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:06:02 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/10 16:22:46 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 22:09:35 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,12 @@ std::string const &AMateria::getType() const { return this->_type; } //Returns t
 unsigned int AMateria::getXP() const { return this->_xp; }           //Returns the Materia's XP
 
 void AMateria::use(ICharacter &) {}
+
+void AMateria::setXP(unsigned int xp)
+{
+    this->_xp = xp;
+}
+void AMateria::setTYPE(std::string type)
+{
+    this->_type = type;
+}
