@@ -6,14 +6,14 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:19:38 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/10 11:25:23 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 15:33:50 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICHARACTER_HPP
 #define ICHARACTER_HPP
-#include "AMateria.hpp"
-
+#include <iostream>
+class AMateria;
 class ICharacter
 {
 public:

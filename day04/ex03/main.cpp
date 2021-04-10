@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 23:19:49 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/04/09 23:20:04 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/04/10 16:53:35 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Character.hpp"
+#include "Cure.hpp"
 
 int main()
 {
@@ -27,5 +32,47 @@ int main()
     delete bob;
     delete me;
     delete src;
+    //-------------------------------
+    std::cout << std::endl;
+    IMateriaSource *source = new MateriaSource();
+    ICharacter *victor = new Character("Victor");
+    ICharacter *ryze = new Character("Ryze");
+    AMateria *temp;
+
+    temp = source->createMateria("bro");
+
+    source->learnMateria(new Ice());
+    source->learnMateria(new Ice());
+    source->learnMateria(new Ice());
+    source->learnMateria(new Cure());
+    source->learnMateria(new Cure());
+
+    temp = source->createMateria("dude");
+    ryze->equip(temp);
+    ryze->use(0, *victor);
+    temp = source->createMateria("ice");
+    ryze->equip(temp);
+    ryze->use(0, *victor);
+
+    ryze->unequip(0);
+    ryze->use(0, *victor);
+
+    temp = source->createMateria("cure");
+    victor->equip(temp);
+    victor->use(0, *ryze);
+    victor->use(0, *ryze);
+    victor->use(0, *ryze);
+    victor->use(0, *ryze);
+    victor->use(0, *ryze);
+    victor->use(0, *ryze);
+
+    victor->unequip(0);
+    victor->use(0, *ryze);
+
+    delete source;
+    delete victor;
+    delete ryze;
+
+    // system("leaks a.out");
     return 0;
 }

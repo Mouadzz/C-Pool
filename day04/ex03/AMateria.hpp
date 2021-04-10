@@ -6,13 +6,14 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:54:06 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/04/10 11:19:24 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 15:27:46 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 #define AMATERIA_HPP
 #include <iostream>
+#include "ICharacter.hpp"
 
 class AMateria
 {
@@ -23,7 +24,7 @@ protected:
 public:
     AMateria(std::string const &type);
     AMateria();
-    ~AMateria();
+    virtual ~AMateria();
     AMateria(AMateria &copy);
     AMateria &operator=(AMateria const &copy);
     std::string const &getType() const; //Returns the materia type
