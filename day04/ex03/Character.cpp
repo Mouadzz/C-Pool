@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:24:17 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/10 17:12:55 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 17:46:07 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 Character::Character(std::string name) : _name(name)
 {
+    this->_slots = new AMateria *[4];
     for (int i = 0; i < 4; i++)
         this->_slots[i] = NULL;
 }
@@ -30,6 +31,7 @@ Character::~Character()
             this->_slots[i] = NULL;
         }
     }
+    delete [] this->_slots;
 }
 
 Character::Character(Character &copy)
@@ -42,6 +44,9 @@ Character::Character(Character &copy)
             this->_slots[i] = NULL;
         }
     }
+    delete [] this->_slots;
+
+    this->_slots = new AMateria *[4];
     for (int i = 0; i < 4; i++)
         this->_slots[i] = copy._slots[i];
 }
@@ -56,10 +61,11 @@ Character &Character::operator=(Character const &copy)
             this->_slots[i] = NULL;
         }
     }
+    delete [] this->_slots;
+
+    this->_slots = new AMateria *[4];
     for (int i = 0; i < 4; i++)
-    {
         this->_slots[i] = copy._slots[i];
-    }
     return *this;
 }
 

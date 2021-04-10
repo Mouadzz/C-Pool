@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:20:42 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/10 15:25:30 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 17:31:07 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class Character : public ICharacter
 {
 private:
     std::string _name;
-    AMateria *_slots[4];
+    AMateria **_slots;
 
 public:
     Character(std::string name);

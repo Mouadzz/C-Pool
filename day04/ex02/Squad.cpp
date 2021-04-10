@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/08 13:49:26 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/09 15:55:16 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/10 17:45:32 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ Squad::~Squad()
 {
     for (int i = 0; i < this->_nUnit; i++)
         delete this->_units[i];
-    delete this->_units;
+    delete [] this->_units;
 }
 
 int Squad::getCount() const { return this->_nUnit; }
