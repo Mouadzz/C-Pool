@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/09 22:58:58 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/04/09 23:00:40 by mouadlas         ###   ########.fr       */
+/*   Created: 2021/04/10 11:06:02 by mlasrite          #+#    #+#             */
+/*   Updated: 2021/04/10 11:19:26 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,4 @@ AMateria::AMateria() {}
 AMateria::~AMateria() {}
 std::string const &AMateria::getType() const {} //Returns the materia type
 unsigned int AMateria::getXP() const {}         //Returns the Materia's XP
-
-AMateria *AMateria::clone() const {}
-void AMateria::use(ICharacter &target) {}
+ƒ

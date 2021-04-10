@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AMateria.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:54:06 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/04/09 23:11:37 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/04/10 11:19:24 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,10 @@ public:
     AMateria(std::string const &type);
     AMateria();
     ~AMateria();
+    AMateria(AMateria &copy);
+    AMateria &operator=(AMateria const &copy);
     std::string const &getType() const; //Returns the materia type
-    unsigned int getXP() const; //Returns the Materia's XP
+    unsigned int getXP() const;         //Returns the Materia's XP
 
     virtual AMateria *clone() const = 0;
     virtual void use(ICharacter &target);
