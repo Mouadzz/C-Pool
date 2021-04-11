@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:02:48 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 16:28:41 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 15:01:20 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,12 @@ int main()
 
     robert.polymorph(jim);
     robert.polymorph(joe);
+
+    std::cout << std::endl;
+    Pig black("Zed");
+    std::cout << black;
+    robert.polymorph(black);
+    std::cout << std::endl;
 
     return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:44:56 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 16:27:56 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:32:18 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,19 @@ Sorcerer::Sorcerer(std::string name, std::string title) : _name(name), _title(ti
 Sorcerer::~Sorcerer()
 {
     std::cout << this->_name << ", " << this->_title << ", is dead. Consequences will never be the same!" << std::endl;
+}
+
+Sorcerer::Sorcerer(Sorcerer &copy)
+{
+    this->_name = copy.get_name();
+    this->_title = copy.get_title();
+}
+
+Sorcerer &Sorcerer::operator=(Sorcerer &copy)
+{
+    this->_name = copy.get_name();
+    this->_title = copy.get_title();
+    return *this;
 }
 
 std::string Sorcerer::get_name() { return this->_name; }

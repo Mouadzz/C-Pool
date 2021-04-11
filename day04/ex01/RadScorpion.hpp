@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:56:10 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/07 16:27:57 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:29:42 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ class RadScorpion : public Enemy
 public:
     RadScorpion();
     ~RadScorpion();
+    RadScorpion(RadScorpion &copy);
+    RadScorpion &operator=(RadScorpion const &);
 };
 
 #endif

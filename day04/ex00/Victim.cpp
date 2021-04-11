@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 16:02:36 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 17:13:47 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:47:27 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,18 @@
 Victim::Victim(std::string name) : _name(name)
 {
     std::cout << "Some random victim called " << name << " just appeared!" << std::endl;
+}
+
+Victim::Victim(Victim &copy)
+{
+    this->_name = copy.get_name();
+}
+Victim::Victim(){}
+
+Victim &Victim::operator=(Victim &copy)
+{
+    this->_name = copy.get_name();
+    return *this;
 }
 
 Victim::~Victim()

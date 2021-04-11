@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:59:05 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/07 17:44:30 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:24:37 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,4 +66,19 @@ std::ostream &operator<<(std::ostream &out, const Character &c)
     else
         out << c.getName() << " has " << c.getAp() << " AP and is unarmed" << std::endl;
     return out;
+}
+
+Character::Character() {}
+Character::Character(Character &copy)
+{
+    this->_name = copy.getName();
+    this->_ap = copy.getAp();
+    this->_weapon = copy.getWeaponPtr();
+}
+Character &Character::operator=(Character const &copy)
+{
+    this->_name = copy.getName();
+    this->_ap = copy.getAp();
+    this->_weapon = copy.getWeaponPtr();
+    return *this;
 }

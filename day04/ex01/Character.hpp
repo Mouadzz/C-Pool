@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:59:02 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/07 15:17:06 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:23:00 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ private:
 public:
     Character(std::string const &name);
     ~Character();
+    Character();
+    Character(Character &copy);
+    Character &operator=(Character const &copy);
     void recoverAP();
     void equip(AWeapon *);
     void attack(Enemy *);

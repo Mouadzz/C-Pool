@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/07 12:48:47 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/07 16:29:15 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:30:27 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,13 @@ SuperMutant::SuperMutant() : Enemy(170, "Super Mutant")
 }
 
 SuperMutant::~SuperMutant() { std::cout << "Aaargh..." << std::endl; }
+
+SuperMutant::SuperMutant(SuperMutant &copy)
+{
+    *this = copy;
+}
+
+SuperMutant &SuperMutant::operator=(SuperMutant const &)
+{
+    return *this;
+}

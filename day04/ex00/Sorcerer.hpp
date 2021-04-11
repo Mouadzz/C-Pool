@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:43:20 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 16:08:48 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/11 14:32:20 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ private:
 public:
     Sorcerer();
     Sorcerer(std::string name, std::string title);
+    Sorcerer(Sorcerer &copy);
+    Sorcerer &operator=(Sorcerer &copy);
     ~Sorcerer();
     std::string get_name();
     std::string get_title();
