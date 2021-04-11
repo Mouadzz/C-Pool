@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/10 11:24:17 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/10 22:53:36 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/04/11 13:16:44 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,9 @@ Character::~Character()
     for (int i = 0; i < 4; i++)
     {
         if (this->_slots[i])
-        {
-            std::cout << "ojdowcdw     " << i << std::endl;
             delete this->_slots[i];
-        }
         this->_slots[i] = NULL;
     }
-
-    std::cout << "ccccc" << std::endl;
 }
 
 Character::Character(Character &copy) { *this = copy; }
@@ -49,16 +44,13 @@ Character &Character::operator=(Character const &copy)
         }
     }
 
-    for (int i = 0; i < 4; i++)
-        this->_slots[i] = NULL;
-
     this->_name = copy.getName();
 
     for (int i = 0; i < 4; i++)
     {
         if (copy._slots[i])
         {
-            this->_slots[i] = copy._slots[i];
+            this->_slots[i] = copy._slots[i]->clone();
             this->_slots[i]->setXP(copy._slots[i]->getXP());
             this->_slots[i]->setTYPE(copy._slots[i]->getType());
         }
@@ -76,7 +68,7 @@ void Character::equip(AMateria *materia)
         {
             if (this->_slots[i] == NULL)
             {
-                this->_slots[i] = materia;
+                this->_slots[i] = materia->clone();
                 this->_slots[i]->setXP(materia->getXP());
                 this->_slots[i]->setTYPE(materia->getType());
                 std::cout << "Just Equiped -> " << materia->getType() << std::endl;
