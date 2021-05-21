@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/05 15:37:22 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/05 15:37:23 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/04/24 22:52:19 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,3 +56,4 @@ FragTrap &FragTrap::operator=(const FragTrap &b)
     this->_armorDamageReduction = b._armorDamageReduction;
     return *this;
 }
+
