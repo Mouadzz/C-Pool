@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ZombieEvent.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/04 12:13:20 by mlasrite          #+#    #+#             */
-/*   Updated: 2021/04/04 12:13:22 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/05/22 20:08:18 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Zombie *ZombieEvent::newZombie(std::string name)
 void randomChump(ZombieEvent &instance)
 {
     std::string names[] = {"LeBlanc", "Zed", "Lucian", "Cassiopia", "Oriana", "Ryze", "Ekko"};
-    int result = std::rand() % 7;
+    int result = std::rand() % 2;
     Zombie *zomb = instance.newZombie(names[result]);
     zomb->announce();
     delete zomb;
