@@ -6,7 +6,7 @@
 /*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 10:35:00 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/23 18:12:00 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/05/23 18:17:44 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,23 @@
 #include "ShrubberyCreationForm.hpp"
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
     srand(time(0));
 
     int grade = 30;
-    ShrubberyCreationForm shrubbery("Riot Games");
-    PresidentialPardonForm president("Epic Games");
-    RobotomyRequestForm robot("Arena Games");
     try
     {
+        Intern intern;
+        Form *rrf;
         Bureaucrat obj(grade, "Zed");
         std::cout << obj;
-        shrubbery.beSigned(obj);
-        std::cout << shrubbery;
-        obj.executeForm(shrubbery);
+        rrf = intern.makeForm("shrubbery creation", "Epic Games");
+        rrf->beSigned(obj);
+        std::cout << *rrf;
+        obj.executeForm(*rrf);
     }
     catch (std::exception &e)
     {
@@ -40,11 +41,14 @@ int main()
     grade = 5;
     try
     {
+        Intern intern;
+        Form *rrf;
         Bureaucrat obj(grade, "Zed");
         std::cout << obj;
-        president.beSigned(obj);
-        std::cout << president;
-        obj.executeForm(president);
+        rrf = intern.makeForm("robotomy request", "Arena Games");
+        rrf->beSigned(obj);
+        std::cout << *rrf;
+        obj.executeForm(*rrf);
     }
     catch (std::exception &e)
     {
@@ -52,19 +56,23 @@ int main()
     }
 
     std::cout << "***********************" << std::endl;
-    grade = 15;
+    grade = 5;
     try
     {
+        Intern intern;
+        Form *rrf;
         Bureaucrat obj(grade, "Zed");
         std::cout << obj;
-        robot.beSigned(obj);
-        std::cout << robot;
-        obj.executeForm(robot);
+        rrf = intern.makeForm("presidential pardon", "Riot Games");
+        rrf->beSigned(obj);
+        std::cout << *rrf;
+        obj.executeForm(*rrf);
     }
     catch (std::exception &e)
     {
         std::cout << e.what() << std::endl;
     }
 
+    system("leaks a.out");
     return 0;
 }
