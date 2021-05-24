@@ -6,7 +6,7 @@
 /*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 11:07:31 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/24 14:16:21 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/05/24 15:28:43 by mouadlas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void convert_float(char *stock)
             std::cout << "float: +inff" << std::endl;
         else
         {
-            if (n - int(n) != 0.0f)
+            if (n - static_cast<int>(n) != 0.0f)
             {
                 std::cout << "float: " << n << "f" << std::endl;
             }
@@ -54,7 +54,7 @@ void convert_double(char *stock)
             std::cout << "double: +inf" << std::endl;
         else
         {
-            if (n - int(n) != 0.0)
+            if (n - static_cast<int>(n) != 0.0)
                 std::cout << "double: " << n << std::endl;
             else
                 std::cout << "double: " << n << ".0" << std::endl;
