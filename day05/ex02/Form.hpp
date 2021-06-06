@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 10:46:40 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/06/06 18:48:40 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/06/06 20:23:52 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
     Form(std::string const &name, int const &signGrade, int const &executeGrade);
     ~Form();
     Form(Form &copy);
-    Form &operator=(const Form &copy);
+    void operator=(const Form &copy);
     std::string const &getName() const;
     int const &getSignGrade() const;
     int const &getExecuteGrade() const;

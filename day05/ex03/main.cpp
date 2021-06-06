@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 10:35:00 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/23 18:17:44 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/06 20:30:43 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ int main()
         std::cout << e.what() << std::endl;
     }
 
-    system("leaks a.out");
+    // system("leaks a.out");
     return 0;
 }

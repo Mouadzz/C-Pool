@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 10:46:38 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/06/06 18:48:33 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/06/06 20:27:03 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,12 @@ Form::~Form() {}
 
 Form::Form(Form &copy) : _name(copy._name), _signGrade(copy._signGrade), _executeGrade(copy._executeGrade)
 {
-    this->_isSigned = copy._isSigned;
     *this = copy;
 }
 
-Form &Form::operator=(const Form &copy)
+void Form::operator=(const Form &copy)
 {
     this->_isSigned = copy._isSigned;
-    *this = copy;
-    return *this;
 }
 
 std::string const &Form::getName() const { return this->_name; }

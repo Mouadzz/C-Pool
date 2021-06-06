@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 16:46:46 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/06/06 19:06:04 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/06/06 20:29:14 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,9 @@ Intern::Intern() {}
 Intern::~Intern() {}
 
 Intern::Intern(Intern &copy) { *this = copy; }
-Intern &Intern::operator=(const Intern &copy)
+void Intern::operator=(const Intern &copy)
 {
-    *this = copy;
-    return *this;
+    (void)&copy;
 }
 
 Form *Intern::makeForm(std::string name, std::string target)

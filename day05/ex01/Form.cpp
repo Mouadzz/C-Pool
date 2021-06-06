@@ -6,7 +6,7 @@
 /*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 10:46:38 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/06/06 18:01:18 by mlasrite         ###   ########.fr       */
+/*   Updated: 2021/06/06 20:20:01 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ Form::~Form() {}
 
 Form::Form(Form &copy) : _name(copy._name), _signGrade(copy._signGrade), _executeGrade(copy._executeGrade)
 {
-    this->_isSigned = copy._isSigned;
     *this = copy;
 }
 

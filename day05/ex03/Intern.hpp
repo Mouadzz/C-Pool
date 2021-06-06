@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 16:46:48 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/23 17:39:02 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/06 20:28:56 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
     Intern();
     ~Intern();
     Intern(Intern &copy);
-    Intern &operator=(const Intern &copy);
+    void operator=(const Intern &copy);
     Form *makeForm(std::string name, std::string target);
 };
 
