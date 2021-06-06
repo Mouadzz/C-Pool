@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 10:46:38 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/22 13:38:49 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/06 18:01:18 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 #include "Bureaucrat.hpp"
 
-Form::Form(std::string const &name, int const &signGrade, int const &executeGrade) : _name(name), _executeGrade(executeGrade), _signGrade(signGrade)
+Form::Form(std::string const &name, int const &signGrade, int const &executeGrade) : _name(name), _signGrade(signGrade), _executeGrade(executeGrade)
 {
     if (signGrade < 1 || executeGrade < 1)
     {
@@ -28,7 +28,7 @@ Form::Form(std::string const &name, int const &signGrade, int const &executeGrad
 
 Form::~Form() {}
 
-Form::Form(Form &copy) : _signGrade(copy._signGrade), _executeGrade(copy._executeGrade)
+Form::Form(Form &copy) : _name(copy._name), _signGrade(copy._signGrade), _executeGrade(copy._executeGrade)
 {
     this->_isSigned = copy._isSigned;
     *this = copy;
@@ -37,7 +37,6 @@ Form::Form(Form &copy) : _signGrade(copy._signGrade), _executeGrade(copy._execut
 Form &Form::operator=(const Form &copy)
 {
     this->_isSigned = copy._isSigned;
-    *this = copy;
     return *this;
 }
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/22 10:46:40 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/22 19:37:47 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/06 18:48:40 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ class Form
 {
 private:
     std::string const _name;
-    bool _isSigned;
     int const _signGrade;
     int const _executeGrade;
+    bool _isSigned;
 
 public:
     Form(std::string const &name, int const &signGrade, int const &executeGrade);

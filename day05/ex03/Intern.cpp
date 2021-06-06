@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/23 16:46:46 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/23 18:19:12 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/06 19:06:04 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ Form *Intern::makeForm(std::string name, std::string target)
 {
     Form *forms[3] = {new RobotomyRequestForm(target), new ShrubberyCreationForm(target), new PresidentialPardonForm(target)};
     std::string formNames[3] = {"robotomy request", "shrubbery creation", "presidential pardon"};
-    Form *res;
     for (int i = 0; i < 3; i++)
     {
         if (name == formNames[i])
