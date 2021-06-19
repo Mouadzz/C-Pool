@@ -3,21 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 12:53:15 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/26 17:02:02 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/19 12:06:42 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "span.hpp"
 
 Span::Span(unsigned int n) : _n(n) {}
+
 Span::~Span() {}
+
 Span::Span(const Span &copy)
 {
     *this = copy;
 }
+
 Span &Span::operator=(const Span &copy)
 {
     this->_n = copy._n;

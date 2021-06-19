@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 11:28:07 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/26 12:20:00 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/19 11:48:51 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 
     try
     {
-        int ret = easyfind(l, 0);
+        int ret = easyfind(l, 15);
 
         std::cout << ret << std::endl;
     }
