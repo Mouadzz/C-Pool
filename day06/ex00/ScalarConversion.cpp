@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConversion.cpp                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 11:07:31 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/24 16:27:19 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/07 19:12:43 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,12 @@ void convert_char(char *stock)
     n = std::strtol(stock, &end, 10);
     if (strcmp(stock, end) == 0 || n < CHAR_MIN || n > CHAR_MAX)
     {
-        std::cout << "char: impossible" << std::endl;
+        if (strlen(stock) == 1)
+        {
+            std::cout << "char: '" << stock << "'" << std::endl;
+        }
+        else
+            std::cout << "char: impossible" << std::endl;
     }
     else
     {

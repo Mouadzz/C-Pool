@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 16:06:55 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/25 16:52:05 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/19 10:06:07 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,17 @@ int main()
     std::cout << "a = " << a << ", b = " << b << std::endl;
     std::cout << "min( a, b ) = " << ::min(a, b) << std::endl;
     std::cout << "max( a, b ) = " << ::max(a, b) << std::endl;
+
+    std::cout << "---------\n";
+
     std::string c = "chaine1";
     std::string d = "chaine2";
     ::swap(c, d);
     std::cout << "c = " << c << ", d = " << d << std::endl;
     std::cout << "min( c, d ) = " << ::min(c, d) << std::endl;
     std::cout << "max( c, d ) = " << ::max(c, d) << std::endl;
+
+    std::cout << "---------\n";
 
     std::string x = "fwoejfwkemjnkfwefw";
     std::string z = "FWJEOFWEKFW";

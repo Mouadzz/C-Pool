@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mouadlas <mouadlas@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mlasrite <mlasrite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 17:21:18 by mouadlas          #+#    #+#             */
-/*   Updated: 2021/05/25 19:05:05 by mouadlas         ###   ########.fr       */
+/*   Updated: 2021/06/19 10:44:45 by mlasrite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ public:
     ~Array();
     Array &operator=(const Array<T> &copy);
     T &operator[](unsigned int a);
-    unsigned int size();
+    unsigned int size() const;
 };
 
 template <typename T>
@@ -38,11 +38,11 @@ template <typename T>
 Array<T>::Array(unsigned int n)
 {
     this->_size = n;
-    this->_array = new T[n];
+    this->_array = new T[n]();
 }
 
 template <typename T>
-unsigned int Array<T>::size()
+unsigned int Array<T>::size() const
 {
     return this->_size;
 }
@@ -58,7 +58,7 @@ Array<T> &Array<T>::operator=(const Array<T> &copy)
 {
     this->_size = copy._size;
 
-    if (!this->_array)
+    if (this->_array)
         delete[] this->_array;
 
     this->_array = new T[this->_size];
